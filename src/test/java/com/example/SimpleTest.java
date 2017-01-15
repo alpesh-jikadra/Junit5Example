@@ -1,18 +1,25 @@
 package com.example;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
-
-/**
- * Unit test for simple App.
- */
 public class SimpleTest {
 
 	@Test
-	@DisplayName("XXX")
+	@DisplayName("This is first sample test")
 	void simpleTest(){
 		Assertions.assertTrue(!false, "Answer must be true");
+	}
+
+	@Test
+	@Disabled
+	@DisplayName("This is disabld Test")
+	void disabledTest(){
+		Assertions.fail("This test must not be executed");
+	}
+
+	@Test
+	@Tag(("fast-test"))
+	void testTagging(){
+
 	}
 }
